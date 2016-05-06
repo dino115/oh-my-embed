@@ -6,9 +6,7 @@ VERSION BADGE
 [![Test Coverage](https://codeclimate.com/github/dino115/oh-my-embed/badges/coverage.svg)](https://codeclimate.com/github/dino115/oh-my-embed/coverage)
 [![Dependency Status](https://gemnasium.com/badges/github.com/dino115/oh-my-embed.svg)](https://gemnasium.com/github.com/dino115/oh-my-embed)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/oh/my/embed`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Simple gem to interact with oembed providers. Read specs at http://www.oembed.com
 
 ## Installation
 
@@ -38,7 +36,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/oh-my-embed. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dino115/oh-my-embed. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
