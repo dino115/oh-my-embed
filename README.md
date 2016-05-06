@@ -8,6 +8,8 @@ VERSION BADGE
 
 Simple gem to interact with oembed providers. Read specs at http://www.oembed.com
 
+** WORK IN PROGRESS, not finshed yet **
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -48,11 +50,8 @@ First of all you have to create a `OhMyEmbed::Crawler` object and with your desi
 You can use all build-in providers at once, select only a few or mix them up with your custom providers.
 
 ```ruby
-# Crawler without providers
+# Crawler with all build-in providers
 crawler = OhMyEmbed::Crawler.new
-
-# Crawler with all build providers
-crawler = OhMyEmbed::Crawler.new(:all)
 
 # Crawler with specific providers
 crawler = OhMyEmbed::Crawler.new(:youtube, :slideshare)
@@ -97,6 +96,7 @@ response.attribute(:thumbnail_url) # get a single attribute from the raw respons
 ```
 
 A response object provides an easy interface to the different response types and provider specific fields. (i.e. slideshare provides a thumbnail field instead of thumbnail_url)
+
  ```ruby
  response.type # [Symbol] one of :photo, :video, :link, :rich
  response.provider # [OhMyEmbed::Provider]
@@ -104,7 +104,7 @@ A response object provides an easy interface to the different response types and
  response.provider_url # [String|nil]
  response.url # [String] The provided url or original url
  response.author # [Hash|nil] { name: [String], url: [String] }
- response.thumbnail # [Hash] { url: [String|nil], width: [Float], height: [Float] }
+ response.thumbnail # [Hash|nil] { url: [String|nil], width: [Float], height: [Float] }
  response.embed # [Hash|nil] { html: [String|nil] Some html embed code, width: [Float], height: [Float] }
  ```
 
@@ -135,6 +135,9 @@ class MyProvider < OhMyEmbed::Provider
   }
 end
 ```
+
+## Format
+Currently the gem supports only json as response format.
 
 ## Development
 
