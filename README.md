@@ -24,9 +24,117 @@ Or install it yourself as:
 
     $ gem install oh-my-embed
 
+## Build in providers
+
+- Youtube
+- Slideshare
+- Instagram
+- Twitter
+- Facebook
+- Flickr
+- SoundCloud
+- Kickstarter
+- Viddler
+- Vimeo
+- Vine
+
+If you need some other providers feel free to add them via pull request or build it for your application only by using the `OhMyEmbed::Provider` base class.
+See the custom provider section for more informations.
+
 ## Usage
 
-TODO: Write usage instructions here
+### Basics
+First of all you have to create a `OhMyEmbed::Crawler` object and with your desired providers.
+You can use all build-in providers at once, select only a few or mix them up with your custom providers.
+
+```ruby
+# Crawler without providers
+crawler = OhMyEmbed::Crawler.new
+
+# Crawler with all build providers
+crawler = OhMyEmbed::Crawler.new(:all)
+
+# Crawler with specific providers
+crawler = OhMyEmbed::Crawler.new(:youtube, :slideshare)
+
+# Crawler with custom providers
+crawler = OhMyEmbed::Crawler.new(:youtube, MyProvider)
+```
+
+Now you can crawl for your embed code easily with the `fetch` method and get an `OhMyEmbed::Response` object.
+
+```ruby
+result = crawler.fetch('https://www.youtube.com/watch?v=EErY75MXYXI')
+
+# with additional options, piped as parameter to the endpoint
+result = crawler.fetch('https://www.youtube.com/watch?v=EErY75MXYXI', autoplay: 1)
+```
+
+You also can also ask if the url matches an registered url schema or get the provider.
+
+```ruby
+# check if url is embeddable
+crawler.embeddable?('https://www.youtube.com/watch?v=EErY75MXYXI') # => true
+
+# get the provider class
+crawler.provider?('https://www.youtube.com/watch?v=EErY75MXYXI') # => OhMyEmbed::Providers::Youtube
+```
+
+If you have only one provider to use, then you can perform your fetch action directly on the provider too.
+
+```ruby
+OhMyEmbed::Providers::Youtube.fetch('https://www.youtube.com/watch?v=EErY75MXYXI')
+```
+
+### Response handling
+With a response object you have access to all oembed fields, described in http://oembed.com/#section2
+
+To access the raw response you can use the the `attribute` method.
+
+```ruby
+response.attributes # return all raw attributes as hash
+response.attribute(:thumbnail_url) # get a single attribute from the raw response
+```
+
+A response object provides an easy interface to the different response types and provider specific fields. (i.e. slideshare provides a thumbnail field instead of thumbnail_url)
+ ```ruby
+ response.type # [Symbol] one of :photo, :video, :link, :rich
+ response.provider # [OhMyEmbed::Provider]
+ response.provider_name # [String] Provider name from response or readable class name
+ response.provider_url # [String|nil]
+ response.url # [String] The provided url or original url
+ response.author # [Hash|nil] { name: [String], url: [String] }
+ response.thumbnail # [Hash] { url: [String|nil], width: [Float], height: [Float] }
+ response.embed # [Hash|nil] { html: [String|nil] Some html embed code, width: [Float], height: [Float] }
+ ```
+
+### Error handling
+- ** Not found
+- ** Unknown format
+- ** Format not supported
+- ** Unknown response
+- ** Parse error
+
+### Custom providers
+You can create your own provider class by extending the `OhMyEmbed::Provider` base class.
+
+```ruby
+class MyProvider < OhMyEmbed::Provider
+  # The oembed endpoint must be specified
+  self.endpoint = 'https://www.example.com/oembed'
+
+  # The oembed url schemes must be specified, they are used for easy lookup
+  self.schemes = [
+    '//example.com/content/*'
+  ]
+
+  # optional you can use a custom mapping for the response, if your provider doesn't stick to the specification :(
+  # this merges with the default mapping, so you must only set the divergent mapping
+  self.mapping = {
+    'thumbnail.url' => 'thumbnail'
+  }
+end
+```
 
 ## Development
 
