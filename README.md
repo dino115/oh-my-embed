@@ -1,4 +1,10 @@
-# OhMyEmbed
+OhMyEmbed
+=================
+VERSION BADGE
+[![Build Status](https://travis-ci.org/dino115/ruby-oembed.svg?branch=master)](https://travis-ci.org/dino115/ruby-oembed)
+[![Code Climate](https://codeclimate.com/github/dino115/oh-my-embed/badges/gpa.svg)](https://codeclimate.com/github/dino115/oh-my-embed)
+[![Test Coverage](https://codeclimate.com/github/dino115/oh-my-embed/badges/coverage.svg)](https://codeclimate.com/github/dino115/oh-my-embed/coverage)
+[![Dependency Status](https://gemnasium.com/badges/github.com/dino115/oh-my-embed.svg)](https://gemnasium.com/github.com/dino115/oh-my-embed)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/oh/my/embed`. To experiment with that code, run `bin/console` for an interactive prompt.
 
