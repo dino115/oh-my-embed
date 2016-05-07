@@ -2,7 +2,7 @@ module OhMyEmbed
   class Crawler
     attr_reader :providers
 
-    # Initialize crawler
+    # Initialize the OhMyEmbed::Crawler
     #
     # @param *providers [Symbol|OhMyEmbed::Provider|Hash] the providers to register or options as the last argument
     def initialize(*providers)
@@ -16,7 +16,7 @@ module OhMyEmbed
       end
     end
 
-    # Register an oembed provider
+    # Register a provider
     #
     # @param provider [Symbol|OhMyEmbed::Provider]
     # @raise [OhMyEmbed::UnknownProvider] if you try to register an unknown provider
@@ -24,7 +24,7 @@ module OhMyEmbed
       if provider.is_a? Symbol
         begin
           provider = OhMyEmbed::Providers.const_get(provider.to_s.classify)
-        rescue NameError => e
+        rescue NameError
           raise OhMyEmbed::UnknownProvider.new(provider)
         end
       end

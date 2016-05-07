@@ -1,11 +1,9 @@
 require 'spec_helper'
 
-module OhMyEmbed::Providers
-  class Dummy < OhMyEmbed::Provider
-    self.schemes = [
-      '//*.example.com/*'
-    ]
-  end
+class OhMyEmbed::Providers::BuildInDummy < OhMyEmbed::Provider
+  self.schemes = [
+    '//*.example.com/*'
+  ]
 end
 
 describe OhMyEmbed::Crawler do
@@ -33,13 +31,13 @@ describe OhMyEmbed::Crawler do
 
   describe '#register' do
     it 'finds the provider by symbol and add it to the providers list' do
-      expect{ crawler.register(:dummy) }.to change{ crawler.providers.count }.from(0).to(1)
-      expect(crawler.providers.first).to be OhMyEmbed::Providers::Dummy
+      expect{ crawler.register(:build_in_dummy) }.to change{ crawler.providers.count }.from(0).to(1)
+      expect(crawler.providers.first).to be OhMyEmbed::Providers::BuildInDummy
     end
 
     it 'it add the provider class to the providers list' do
-      expect{ crawler.register(OhMyEmbed::Providers::Dummy) }.to change{ crawler.providers.count }.from(0).to(1)
-      expect(crawler.providers.first).to be OhMyEmbed::Providers::Dummy
+      expect{ crawler.register(OhMyEmbed::Providers::BuildInDummy) }.to change{ crawler.providers.count }.from(0).to(1)
+      expect(crawler.providers.first).to be OhMyEmbed::Providers::BuildInDummy
     end
 
     it 'raises an error if no provider class found' do
@@ -50,7 +48,7 @@ describe OhMyEmbed::Crawler do
   describe '#register_all_build_in_providers' do
     it 'adds all the build-in providers' do
       expect{ crawler.register_all_build_in_providers }.to change{ crawler.providers.count }
-      expect(crawler.providers.include?(OhMyEmbed::Providers::Dummy)).to be true
+      expect(crawler.providers.include?(OhMyEmbed::Providers::BuildInDummy)).to be true
     end
   end
 
@@ -59,18 +57,18 @@ describe OhMyEmbed::Crawler do
       build_in_providers = crawler.build_in_providers
       expect(build_in_providers).to be_a Array
       expect(build_in_providers.all?{ |p| p.is_a? Symbol }).to be true
-      expect(build_in_providers.include?(:Dummy)).to be true
+      expect(build_in_providers.include?(:BuildInDummy)).to be true
     end
   end
 
   context 'crawler with a dummy provider' do
     before do
-      crawler.register :dummy
+      crawler.register :build_in_dummy
     end
 
     describe '#fetch' do
       it 'calls fetch on the found provider and return an OhMyEmbed::Response' do
-        expect(OhMyEmbed::Providers::Dummy).to receive(:fetch).with(url).and_return(OhMyEmbed::Response.new)
+        expect(OhMyEmbed::Providers::BuildInDummy).to receive(:fetch).with(url).and_return(OhMyEmbed::Response.new(OhMyEmbed::Providers::BuildInDummy))
         response = crawler.fetch(url)
 
         expect(response).to be_a OhMyEmbed::Response
@@ -84,7 +82,7 @@ describe OhMyEmbed::Crawler do
 
       it 'finds and return the matching provider' do
         provider = crawler.provider_for(url)
-        expect(provider).to be OhMyEmbed::Providers::Dummy
+        expect(provider).to be OhMyEmbed::Providers::BuildInDummy
       end
     end
 

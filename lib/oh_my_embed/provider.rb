@@ -43,7 +43,7 @@ module OhMyEmbed
       Regexp.union regexes
     end
 
-    # Make a regular expression from an url schema
+    # Create a regular expression from an url schema, does nothing if the schema is already a Regexp
     #
     # @param [String|Regexp] schema
     # @return [Regexp]
