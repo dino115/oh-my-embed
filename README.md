@@ -50,14 +50,17 @@ First of all you have to create a `OhMyEmbed::Crawler` object and with your desi
 You can use all build-in providers at once, select only a few or mix them up with your custom providers.
 
 ```ruby
-# Crawler with all build-in providers
-crawler = OhMyEmbed::Crawler.new
+# Crawler with all build-in providers (includes all classes you added to the OhMyEmbed::Providers module)
+crawler = OhMyEmbed::Crawler.new(all: true)
 
 # Crawler with specific providers
 crawler = OhMyEmbed::Crawler.new(:youtube, :slideshare)
 
 # Crawler with custom providers
 crawler = OhMyEmbed::Crawler.new(:youtube, MyProvider)
+
+# Crawler with all build-in and a custom provider
+crawler = OhMyEmbed::Crawler.new(MyProvider, all: true)
 ```
 
 Now you can crawl for your embed code easily with the `fetch` method and get an `OhMyEmbed::Response` object.
@@ -76,7 +79,7 @@ You also can also ask if the url matches an registered url schema or get the pro
 crawler.embeddable?('https://www.youtube.com/watch?v=EErY75MXYXI') # => true
 
 # get the provider class
-crawler.provider?('https://www.youtube.com/watch?v=EErY75MXYXI') # => OhMyEmbed::Providers::Youtube
+crawler.provider_for('https://www.youtube.com/watch?v=EErY75MXYXI') # => OhMyEmbed::Providers::Youtube
 ```
 
 If you have only one provider to use, then you can perform your fetch action directly on the provider too.

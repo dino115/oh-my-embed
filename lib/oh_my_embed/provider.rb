@@ -27,6 +27,13 @@ module OhMyEmbed
       }
     end
 
+    # Fetch the embed result for the provider content
+    #
+    # @param [String] url
+    # @return [OhMyEmbed::Response]
+    def self.fetch(url)
+    end
+
     # Get a union regex to match the providers url schemes
     #
     # @return [Regexp]
