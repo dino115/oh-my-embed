@@ -11,4 +11,7 @@ require 'oh_my_embed'
 # Pry.start
 
 require 'irb'
+require 'irb/completion'
+require 'irb/ext/history'
+
 IRB.start
