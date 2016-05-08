@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://soundcloud.com/oembed?format=json&url=https://soundcloud.com/forss/flickermood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, Origin
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 08 May 2016 11:49:57 GMT
+      Etag:
+      - '"2d6b1f97d0ed1cbecef9424944baa728"'
+      Server:
+      - am/2
+      Set-Cookie:
+      - sc_anonymous_id=126181-468397-422745-556022; path=/; expires=Wed, 06 May 2026
+        11:49:57 GMT; domain=.soundcloud.com
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '449'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"version":1.0,"type":"rich","provider_name":"SoundCloud","provider_url":"http://soundcloud.com","height":400,"width":"100%","title":"Flickermood
+        by Forss","description":"From the Soulhack album,\u0026nbsp;recently featured
+        in this ad \u003Ca href=\"https://www.dswshoes.com/tv_commercial.jsp?m=october2007\"\u003Ehttps://www.dswshoes.com/tv_commercial.jsp?m=october2007\u003C/a\u003E
+        ","thumbnail_url":"http://i1.sndcdn.com/artworks-000067273316-smsiqx-t500x500.jpg","html":"\u003Ciframe
+        width=\"100%\" height=\"400\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?visual=true\u0026url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F293\u0026show_artwork=true\"\u003E\u003C/iframe\u003E","author_name":"Forss","author_url":"http://soundcloud.com/forss"}'
+    http_version: 
+  recorded_at: Sun, 08 May 2016 11:49:57 GMT
+recorded_with: VCR 3.0.1
