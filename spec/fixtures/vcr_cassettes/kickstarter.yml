@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.kickstarter.com/services/oembed?format=json&url=https://www.kickstarter.com/projects/531257408/professional-3-stage-knife-sharpener?ref=category_popular
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31557600
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Heartbleed:
+      - NO; see http://heartbleedheader.com
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 38a20eff-15ff-4cd6-a5f6-fd9db97950bc
+      X-Runtime:
+      - '0.020571'
+      Transfer-Encoding:
+      - chunked
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 08 May 2016 11:58:02 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-ams4148-AMS
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {"version":"1.0","type":"rich","provider_name":"Kickstarter","provider_url":"https://www.kickstarter.com/","title":"Professional 3 Stage Knife Sharpener","author_name":"Kongqiang","author_url":"https://www.kickstarter.com/profile/531257408","thumbnail_url":"https://ksr-ugc.imgix.net/projects/2452435/photo-original.jpg?w=560&h=315&fit=fill&bg=FFFFFF&v=1461877181&auto=format&q=92&s=aae8e61c91e611fd27cc2db1c25a8916","thumbnail_width":560,"thumbnail_height":315.0,"width":480,"height":270.0,"html":"<iframe frameborder=\"0\" height=\"270.0\" scrolling=\"no\" src=\"https://www.kickstarter.com/projects/531257408/professional-3-stage-knife-sharpener/widget/video.html\" width=\"480\"></iframe>"}
+    http_version: 
+  recorded_at: Sun, 08 May 2016 11:58:02 GMT
+recorded_with: VCR 3.0.1
