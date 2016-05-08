@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/oembed/?format=json&url=http://instagr.am/p/fA9uwTtkSN
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Sun, 08 May 2016 10:22:56 GMT
+      Content-Type:
+      - application/json
+      Set-Cookie:
+      - csrftoken=5b8bafe22a2d41248b3be8426b4f1170; expires=Sun, 07-May-2017 10:22:56
+        GMT; Max-Age=31449600; Path=/
+      - mid=Vy8TgAAEAAHr9e0EiKy1oiFOtj6E; expires=Sat, 03-May-2036 10:22:56 GMT; Max-Age=630720000;
+        Path=/
+      - s_network=; expires=Sun, 08-May-2016 11:22:56 GMT; Max-Age=3600; Path=/
+      - sessionid=IGSCf4e12422bb040f780b62a76f51d81658f436f18061debf80dcf2eefa20332090%3AQ4gZtzAIRGkrIW93eddUvjGtZa6jgSUk%3A%7B%22asns%22%3A%7B%2237.201.168.72%22%3A6830%2C%22time%22%3A1462702976%7D%7D;
+        expires=Sat, 06-Aug-2016 10:22:56 GMT; httponly; Max-Age=7776000; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1402'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"provider_url": "https://www.instagram.com", "media_id": "558717847597368461_9538472",
+        "author_name": "diegoquinteiro", "height": null, "thumbnail_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e15/11358196_1472850273007829_614249870_n.jpg?ig_cache_key=NTU4NzE3ODQ3NTk3MzY4NDYx.2",
+        "thumbnail_width": 640, "thumbnail_height": 640, "provider_name": "Instagram",
+        "title": "Wii Gato (Lipe Sleep)", "html": "\u003cblockquote class=\"instagram-media\"
+        data-instgrm-captioned data-instgrm-version=\"6\" style=\" background:#FFF;
+        border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px
+        0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%;
+        width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"\u003e\u003cdiv style=\"padding:8px;\"\u003e
+        \u003cdiv style=\" background:#F8F8F8; line-height:0; margin-top:40px; padding:50%
+        0; text-align:center; width:100%;\"\u003e \u003cdiv style=\" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC);
+        display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px;
+        width:44px;\"\u003e\u003c/div\u003e\u003c/div\u003e \u003cp style=\" margin:8px
+        0 0 0; padding:0 4px;\"\u003e \u003ca href=\"https://www.instagram.com/p/fA9uwTtkSN/\"
+        style=\" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal;
+        font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;\"
+        target=\"_blank\"\u003eWii Gato (Lipe Sleep)\u003c/a\u003e\u003c/p\u003e \u003cp
+        style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px;
+        margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center;
+        text-overflow:ellipsis; white-space:nowrap;\"\u003eA video posted by @diegoquinteiro
+        on \u003ctime style=\" font-family:Arial,sans-serif; font-size:14px; line-height:17px;\"
+        datetime=\"2013-10-03T18:19:39+00:00\"\u003eOct 3, 2013 at 11:19am PDT\u003c/time\u003e\u003c/p\u003e\u003c/div\u003e\u003c/blockquote\u003e\n\u003cscript
+        async defer src=\"//platform.instagram.com/en_US/embeds.js\"\u003e\u003c/script\u003e",
+        "width": 658, "version": "1.0", "author_url": "https://www.instagram.com/diegoquinteiro",
+        "author_id": 9538472, "type": "rich"}'
+    http_version: 
+  recorded_at: Sun, 08 May 2016 10:22:56 GMT
+recorded_with: VCR 3.0.1
