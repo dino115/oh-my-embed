@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://publish.twitter.com/oembed?format=json&url=https://twitter.com/Interior/status/507185938620219395
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '501'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 08 May 2016 10:34:44 GMT
+      Expires:
+      - Tue, 14 Apr 2116 10:34:44 GMT
+      Last-Modified:
+      - Sun, 08 May 2016 10:34:44 GMT
+      Server:
+      - tsa_o
+      Set-Cookie:
+      - guest_id=v1%3A146270368433227856; Domain=.twitter.com; Path=/; Expires=Tue,
+        08-May-2018 10:34:44 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 7cb3ac64bc2efd30d993cea7a81550d7
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '110'
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https:\/\/twitter.com\/Interior\/status\/507185938620219395","author_name":"US
+        Dept of Interior","author_url":"https:\/\/twitter.com\/Interior","html":"\u003Cblockquote
+        class=\"twitter-tweet\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EHappy 50th
+        anniversary to the Wilderness Act! Here&#39;s a great wilderness photo from
+        \u003Ca href=\"https:\/\/twitter.com\/YosemiteNPS\"\u003E@YosemiteNPS\u003C\/a\u003E.
+        \u003Ca href=\"https:\/\/twitter.com\/hashtag\/Wilderness50?src=hash\"\u003E#Wilderness50\u003C\/a\u003E
+        \u003Ca href=\"http:\/\/t.co\/HMhbyTg18X\"\u003Epic.twitter.com\/HMhbyTg18X\u003C\/a\u003E\u003C\/p\u003E&mdash;
+        US Dept of Interior (@Interior) \u003Ca href=\"https:\/\/twitter.com\/Interior\/status\/507185938620219395\"\u003ESeptember
+        3, 2014\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"\/\/platform.twitter.com\/widgets.js\"
+        charset=\"utf-8\"\u003E\u003C\/script\u003E","width":550,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","height":null,"version":"1.0"}'
+    http_version: 
+  recorded_at: Sun, 08 May 2016 10:34:44 GMT
+recorded_with: VCR 3.0.1
