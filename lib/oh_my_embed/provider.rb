@@ -36,6 +36,7 @@ module OhMyEmbed
     # @raise [OhMyEmbed::PermissionDenied] on request status 401
     # @raise [OhMyEmbed::NotFound] on request status 404
     # @raise [OhMyEmbed::FormatNotSupported] on request status 501
+    # @raise [OhMyEmbed::ParseError] on parsing error
     #
     # @return [OhMyEmbed::Response]
     def self.fetch(url, params = {})
@@ -62,7 +63,11 @@ module OhMyEmbed
         when Net::HTTPNotImplemented
           raise OhMyEmbed::FormatNotSupported.new(self.name)
         when Net::HTTPOK
-          response_data = JSON.parse(response.body)
+          begin
+            response_data = JSON.parse(response.body)
+          rescue
+            raise OhMyEmbed::ParseError.new(self.name, url, response.body)
+          end
       end
 
       OhMyEmbed::Response.new(self, response_data)

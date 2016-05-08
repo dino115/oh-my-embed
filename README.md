@@ -108,15 +108,18 @@ A response object provides an easy interface to the different response types and
  response.url # [String] The provided url or original url
  response.author # [Hash|nil] { name: [String], url: [String] }
  response.thumbnail # [Hash|nil] { url: [String|nil], width: [Float], height: [Float] }
- response.embed # [Hash|nil] { html: [String|nil] Some html embed code, width: [Float], height: [Float] }
+ response.embed # [Hash] { html: [String|nil] Some html embed code, url: [String|nil], width: [Float|nil], height: [Float|nil] }
  ```
 
 ### Error handling
-- ** Not found
-- ** Unknown format
-- ** Format not supported
-- ** Unknown response
-- ** Parse error
+The gem can raise the following errors. All of them are subclasses of a generic `OhMyEmbed::Error` class.
+
+- *OhMyEmbed::UnknownProvider* when you try to register an unknown provider
+- *OhMyEmbed::ProviderNotFound* when no provider matches the schema of given content url
+- *OhMyEmbed::NotFound* when the endpoint returns with 404 not found
+- *OhMyEmbed::PermissionDenied* when the endpoint returns with 401 unauthorized
+- *OhMyEmbed::FormatNotSupported* when the endpoint returns with 501 not implemented
+- *OhMyEmbed::ParseError* when the parser failed, i.e. the responded json is malformed
 
 ### Custom providers
 You can create your own provider class by extending the `OhMyEmbed::Provider` base class.

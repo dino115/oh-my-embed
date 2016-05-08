@@ -11,6 +11,7 @@ module OhMyEmbed
   # - OhMyEmbed::NotFound
   # - OhMyEmbed::PermissionDenied
   # - OhMyEmbed::FormatNotSupported
+  # - OhMyEmbed::ParseError
   class Error < StandardError; end
 
   class UnknownProvider < OhMyEmbed::Error # nodoc #
@@ -40,6 +41,12 @@ module OhMyEmbed
   class FormatNotSupported < OhMyEmbed::Error # nodoc #
     def self.new(provider_name)
       super("The provider '#{provider_name}' doesn't support json")
+    end
+  end
+
+  class ParseError < OhMyEmbed::Error # nodoc #
+    def self.new(provider_name, url, data_string)
+      super("Parsing failed for content (#{data_string}); Provider: #{provider_name}; URL: #{url}")
     end
   end
 end
