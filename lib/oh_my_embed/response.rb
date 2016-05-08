@@ -52,6 +52,13 @@ module OhMyEmbed
       attribute(mapping['url']) || @url
     end
 
+    # Get the title
+    #
+    # @return [String]
+    def title
+      attribute(mapping['title'])
+    end
+
     # Get the author informations
     #
     # @return [Hash] :name, :url

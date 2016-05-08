@@ -18,6 +18,7 @@ module OhMyEmbed
         'provider_name' => 'provider_name',
         'provider_url' => 'provider_url',
         'url' => 'url',
+        'title' => 'title',
         'author.name' => 'author_name',
         'author.url' => 'author_url',
         'thumbnail.url' => 'thumbnail_url',

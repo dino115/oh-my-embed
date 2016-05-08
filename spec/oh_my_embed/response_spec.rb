@@ -97,6 +97,17 @@ describe OhMyEmbed::Response do
     end
   end
 
+  describe '#title' do
+    it 'returns the title' do
+      expect(response.title).to eq 'My content'
+    end
+
+    it 'returns nil if no title in response found' do
+      response.attributes['title'] = nil
+      expect(response.title).to be_nil
+    end
+  end
+
   describe '#author' do
     it 'returns an author hash' do
       expect(response.author).to be_a Hash
