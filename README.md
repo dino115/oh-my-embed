@@ -1,14 +1,12 @@
 OhMyEmbed
 =================
-VERSION BADGE
+[![Gem Version](https://badge.fury.io/rb/oh-my-embed.svg)](https://badge.fury.io/rb/oh-my-embed)
 [![Build Status](https://travis-ci.org/dino115/oh-my-embed.svg?branch=master)](https://travis-ci.org/dino115/oh-my-embed)
 [![Code Climate](https://codeclimate.com/github/dino115/oh-my-embed/badges/gpa.svg)](https://codeclimate.com/github/dino115/oh-my-embed)
 [![Test Coverage](https://codeclimate.com/github/dino115/oh-my-embed/badges/coverage.svg)](https://codeclimate.com/github/dino115/oh-my-embed/coverage)
 [![Dependency Status](https://gemnasium.com/badges/github.com/dino115/oh-my-embed.svg)](https://gemnasium.com/github.com/dino115/oh-my-embed)
 
 Simple gem to interact with oembed providers. Read specs at http://www.oembed.com
-
-** WORK IN PROGRESS, not finshed yet **
 
 ## Installation
 
@@ -157,8 +155,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/dino115/oh-my-embed. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
