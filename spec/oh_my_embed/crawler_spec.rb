@@ -68,7 +68,7 @@ describe OhMyEmbed::Crawler do
 
     describe '#fetch' do
       it 'calls fetch on the found provider and return an OhMyEmbed::Response' do
-        expect(OhMyEmbed::Providers::BuildInDummy).to receive(:fetch).with(url).and_return(OhMyEmbed::Response.new(OhMyEmbed::Providers::BuildInDummy))
+        expect(OhMyEmbed::Providers::BuildInDummy).to receive(:fetch).with(url).and_return(OhMyEmbed::Response.new(OhMyEmbed::Providers::BuildInDummy, url))
         response = crawler.fetch(url)
 
         expect(response).to be_a OhMyEmbed::Response

@@ -2,12 +2,14 @@ module OhMyEmbed
   ##
   # Provider
   class Provider
+    class_attribute :provider_name
     class_attribute :endpoint
     class_attribute :schemes
-    class_attribute :mapping
+    class_attribute :custom_mapping
 
+    self.provider_name = nil
     self.endpoint = nil
-    self.mapping = {}
+    self.custom_mapping = {}
     self.schemes = []
 
     def self.default_mapping
@@ -70,16 +72,17 @@ module OhMyEmbed
           end
       end
 
-      OhMyEmbed::Response.new(self, response_data)
+      OhMyEmbed::Response.new(self, url, response_data)
     end
 
     # Get a union regex to match the providers url schemes
     #
     # @return [Regexp]
     def self.regex
-      regexes = self.schemes.map(&method(:regexify))
-
-      Regexp.union regexes
+      @_regex ||= begin
+        regexes = self.schemes.map(&method(:regexify))
+        Regexp.union regexes
+      end
     end
 
     # Create a regular expression from an url schema, does nothing if the schema is already a Regexp
@@ -93,6 +96,20 @@ module OhMyEmbed
         schema = "(https:|http:)#{schema}" unless schema.start_with?('http')
         Regexp.new("^#{schema.gsub('.', '\.').gsub('*', '(.*?)')}$", Regexp::IGNORECASE)
       end
+    end
+
+    # Get the mapping hash, defaults merged with the custom mapping
+    #
+    # @return [Hash]
+    def self.mapping
+      @_mapping ||= self.default_mapping.merge(self.custom_mapping)
+    end
+
+    # Get the provider name
+    #
+    # @return [String]
+    def self.provider_name
+      instance_variable_get('@provider_name') || self.name.split('::').last
     end
   end
 end

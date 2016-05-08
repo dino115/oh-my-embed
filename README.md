@@ -46,8 +46,8 @@ See the custom provider section for more informations.
 ## Usage
 
 ### Basics
-First of all you have to create a `OhMyEmbed::Crawler` object and with your desired providers.
-You can use all build-in providers at once, select only a few or mix them up with your custom providers.
+First of all you have to create a `OhMyEmbed::Crawler` object and register your desired providers.
+You can use all build-in providers, select only a few or mix them up with your custom providers.
 
 ```ruby
 # Crawler with all build-in providers (includes all classes you added to the OhMyEmbed::Providers module)
@@ -82,7 +82,7 @@ crawler.embeddable?('https://www.youtube.com/watch?v=EErY75MXYXI') # => true
 crawler.provider_for('https://www.youtube.com/watch?v=EErY75MXYXI') # => OhMyEmbed::Providers::Youtube
 ```
 
-If you have only one provider to use, then you can perform your fetch action directly on the provider too.
+If you want use only a single provider, then you can perform your fetch action directly on the provider too.
 
 ```ruby
 OhMyEmbed::Providers::Youtube.fetch('https://www.youtube.com/watch?v=EErY75MXYXI')
@@ -134,9 +134,12 @@ class MyProvider < OhMyEmbed::Provider
     '//example.com/content/*'
   ]
 
-  # optional you can use a custom mapping for the response, if your provider doesn't stick to the specification :(
+  # Optional you can define the provider name, if not specified, the name will extracted from the class name
+  self.provider_name = 'My Provider'
+
+  # Optional you can use a custom mapping for the response, if your provider doesn't stick to the specification :(
   # this merges with the default mapping, so you must only set the divergent mapping
-  self.mapping = {
+  self.custom_mapping = {
     'thumbnail.url' => 'thumbnail'
   }
 end
