@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.slideshare.net/api/oembed/2?format=json&url=http://de.slideshare.net/haraldf/business-quotes-for-2011
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 08 May 2016 10:08:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Runtime:
+      - '0.029925'
+      X-Request-Uuid:
+      - klA26xRYoRi0KQ4PET8oZw==
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Bench-Route:
+      - oembed/get_oembed_code
+      X-Request-Id:
+      - 5c5aaef23f32736692a20264b64065c6
+      P3p:
+      - CP="OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND"
+      X-Varnish:
+      - '401515260'
+      Age:
+      - '0'
+      Accept-Ranges:
+      - bytes
+      X-Fs-Uuid:
+      - 0d60bf8acd8f4c14c085e9fac22a0000
+      X-Li-Fabric:
+      - prod-lva1
+      Set-Cookie:
+      - SERVERID=r88|Vy8QD|Vy8QD; path=/
+      - _uv_id=1897455083; Path=/; Domain=.slideshare.net
+      - bcookie="v=2&fa22755a-e691-4093-86f4-fb717cc13105"; domain=.slideshare.net;
+        Path=/; Expires=Tue, 08-May-2018 21:45:44 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-tln1
+      X-Li-Uuid:
+      - DWC/is2PTBTAhen6wioAAA==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"slide_image_baseurl_suffix":"-1024.jpg","type":"rich","provider_name":"SlideShare","height":355,"total_slides":75,"title":"Business
+        Quotes for 2011","provider_url":"http://www.slideshare.net","version":"1.0","slide_image_baseurl":"//image.slidesharecdn.com/110103quotes2010-12-110103073149-phpapp01/95/slide-","conversion_version":2,"width":425,"thumbnail_width":170,"version_no":"1294104671","author_url":"http://www.slideshare.net/haraldf","thumbnail_height":128,"slideshow_id":6435157,"html":"\u003Ciframe
+        src=\"https://www.slideshare.net/slideshow/embed_code/key/6PCWPGFw9SwsAY\"
+        width=\"427\" height=\"356\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\"
+        scrolling=\"no\" style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px;
+        max-width: 100%;\" allowfullscreen\u003E \u003C/iframe\u003E \u003Cdiv style=\"margin-bottom:5px\"\u003E
+        \u003Cstrong\u003E \u003Ca href=\"https://www.slideshare.net/haraldf/business-quotes-for-2011\"
+        title=\"Business Quotes for 2011\" target=\"_blank\"\u003EBusiness Quotes
+        for 2011\u003C/a\u003E \u003C/strong\u003E from \u003Cstrong\u003E\u003Ca
+        href=\"http://www.slideshare.net/haraldf\" target=\"_blank\"\u003EHarald Felgner
+        (PhD)\u003C/a\u003E\u003C/strong\u003E \u003C/div\u003E\n\n","author_name":"Harald
+        Felgner (PhD)","thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/110103quotes2010-12-110103073149-phpapp01-thumbnail.jpg?cb=1294104671"}'
+    http_version: 
+  recorded_at: Sun, 08 May 2016 10:08:12 GMT
+recorded_with: VCR 3.0.1
