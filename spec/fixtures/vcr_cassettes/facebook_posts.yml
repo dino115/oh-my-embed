@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.facebook.com/plugins/post/oembed.json/?format=json&url=https://www.facebook.com/FacebookDeutschland/posts/10153796066380932
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=15552000; preload
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Public-Key-Pins-Report-Only:
+      - max-age=500; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=";
+        pin-sha256="q4PO2G2cbkZhZ82+JgmRUyGMoAeozA+BSXVXQWB8XWQ="; report-uri="http://reports.fb.com/hpkp/"
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - G6RjLdrqPe8/KAKzPR9FA3Ayv4EfoebAqPUlmmAmM/JTFIvgxfqLk8oSwSQefQRM6yq0XpTkFREf1Qlb87cuWQ==
+      Date:
+      - Sun, 08 May 2016 11:18:20 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"author_name":"Facebook","author_url":"https://www.facebook.com/FacebookDeutschland/","provider_url":"https://www.facebook.com","provider_name":"Facebook","success":true,"height":null,"html":"\u003Cdiv
+        id=\"fb-root\">\u003C/div>\n\u003Cscript>(function(d, s, id) {\n  var js,
+        fjs = d.getElementsByTagName(s)[0];\n  if (d.getElementById(id)) return;\n  js
+        = d.createElement(s); js.id = id;\n  js.src = \"//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.3\";\n  fjs.parentNode.insertBefore(js,
+        fjs);\n}(document, ''script'', ''facebook-jssdk''));\u003C/script>\u003Cdiv
+        class=\"fb-post\" data-href=\"https://www.facebook.com/FacebookDeutschland/posts/10153796066380932\"
+        data-width=\"552\">\u003Cdiv class=\"fb-xfbml-parse-ignore\">\u003Cblockquote
+        cite=\"https://www.facebook.com/FacebookDeutschland/posts/10153796066380932\">\u003Cp>Mark
+        Zuckerberg besucht Berlin.\u003C/p>Posted by \u003Ca href=\"https://www.facebook.com/FacebookDeutschland/\">Facebook\u003C/a>
+        on&nbsp;\u003Ca href=\"https://www.facebook.com/FacebookDeutschland/posts/10153796066380932\">Donnerstag,
+        25. Februar 2016\u003C/a>\u003C/blockquote>\u003C/div>\u003C/div>","type":"rich","version":"1.0","url":"https://www.facebook.com/FacebookDeutschland/posts/10153796066380932","width":552}'
+    http_version: 
+  recorded_at: Sun, 08 May 2016 11:18:20 GMT
+recorded_with: VCR 3.0.1
