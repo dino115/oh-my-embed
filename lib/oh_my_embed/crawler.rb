@@ -10,7 +10,7 @@ module OhMyEmbed
 
       options = providers.extract_options!
 
-      register_all_build_in_providers if options[:all]
+      register_all_built_in_providers if options[:all]
       providers.each do |provider|
         register provider
       end
@@ -32,10 +32,10 @@ module OhMyEmbed
       @providers.add provider
     end
 
-    # Register all build in providers for this crawler
+    # Register all built-in providers for this crawler
     #
-    def register_all_build_in_providers
-      build_in_providers.each do |provider|
+    def register_all_built_in_providers
+      built_in_providers.each do |provider|
         register provider
       end
     end
@@ -69,7 +69,7 @@ module OhMyEmbed
     # Select all provider constants from the OhMyEmbed::Providers module
     #
     # @return [Array<Symbol>]
-    def build_in_providers
+    def built_in_providers
       OhMyEmbed::Providers.constants
         .select { |c| OhMyEmbed::Providers.const_get(c) < OhMyEmbed::Provider }
     end

@@ -24,7 +24,7 @@ Or install it yourself as:
 
     $ gem install oh-my-embed
 
-## Build in providers
+## Built-in providers
 
 - Youtube
 - Slideshare
@@ -44,10 +44,10 @@ See the custom provider section for more informations.
 
 ### Basics
 First of all you have to create a `OhMyEmbed::Crawler` object and register your desired providers.
-You can use all build-in providers, select only a few or mix them up with your custom providers.
+You can use all built-in providers, select only a few or mix them up with your custom providers.
 
 ```ruby
-# Crawler with all build-in providers (includes all classes you added to the OhMyEmbed::Providers module)
+# Crawler with all built-in providers (includes all classes you added to the OhMyEmbed::Providers module)
 crawler = OhMyEmbed::Crawler.new(all: true)
 
 # Crawler with specific providers
@@ -56,7 +56,7 @@ crawler = OhMyEmbed::Crawler.new(:youtube, :slideshare)
 # Crawler with custom providers
 crawler = OhMyEmbed::Crawler.new(:youtube, MyProvider)
 
-# Crawler with all build-in and a custom provider
+# Crawler with all built-in and a custom provider
 crawler = OhMyEmbed::Crawler.new(MyProvider, all: true)
 ```
 
