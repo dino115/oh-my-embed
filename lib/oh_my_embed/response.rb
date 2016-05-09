@@ -106,5 +106,14 @@ module OhMyEmbed
         height: attribute(mapping['embed.height']),
       }.compact
     end
+
+    # Return the Hash representation of this response
+    #
+    # @return [Hash] :type, :provider_name, :provider_url, :url, :author, :thumbnail, :embed
+    def to_h
+      %i{ type provider_name provider_url url title author thumbnail embed }.map do |key|
+        [key, self.send(key)]
+      end.to_h
+    end
   end
 end

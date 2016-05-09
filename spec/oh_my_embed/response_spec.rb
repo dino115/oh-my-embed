@@ -171,4 +171,36 @@ describe OhMyEmbed::Response do
       expect(response.embed[:url]).to eq 'http://www.example.com/my/content'
     end
   end
+
+  describe '#to_h' do
+    it 'returns a hash' do
+      expect(response.to_h).to be_a Hash
+    end
+
+    it 'includes the required fields' do
+      hash = response.to_h
+
+      expect(hash).to eq({
+        type: :rich,
+        provider_name: 'My awesome example provider',
+        provider_url: 'http://www.example.com',
+        url: 'http://www.example.com/my/content',
+        title: 'My content',
+        author: {
+          name: 'John Doe',
+          url: 'http://www.example.com/users/john.doe',
+        },
+        thumbnail: {
+          url: 'http://www.example.com/images/my-content.png',
+          width: 200,
+          height: 200,
+        },
+        embed: {
+          html: '<iframe src="http://www.example.com/embed/my-content" />',
+          width: 640,
+          height: 480,
+        },
+      })
+    end
+  end
 end
