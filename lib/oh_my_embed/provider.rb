@@ -1,3 +1,6 @@
+require 'net/http'
+require 'oh_my_embed/response'
+
 module OhMyEmbed
   ##
   # Provider
