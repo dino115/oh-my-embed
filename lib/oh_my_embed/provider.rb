@@ -52,11 +52,8 @@ module OhMyEmbed
         format: 'json',
       }))
 
-      connection = Net::HTTP.new(uri.host, uri.port)
-      connection.use_ssl = (uri.port == URI::HTTPS::DEFAULT_PORT)
-
       begin
-        response = connection.get(uri.request_uri)
+        response = Net::HTTP.get_response(uri)
       rescue Timeout::Error
         raise OhMyEmbed::Error.new('Request timed out')
       end
