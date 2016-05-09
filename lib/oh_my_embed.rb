@@ -1,9 +1,18 @@
 require 'active_support/all'
 
-Dir.glob(File.join(__dir__, 'oh_my_embed', '*.rb'), &method(:require))
-Dir.glob(File.join(__dir__, 'oh_my_embed', 'providers', '*.rb'), &method(:require))
+require 'oh_my_embed/crawler'
+require 'oh_my_embed/provider'
+require 'oh_my_embed/version'
 
 module OhMyEmbed
+
+  module Providers
+    # Setup autoloading for every provider in oh_my_embed/providers
+    Dir.glob(File.join(__dir__, 'oh_my_embed', 'providers', '*.rb')).each do |provider_path|
+      autoload File.basename(provider_path, '.rb').camelize, provider_path
+    end
+  end
+
   # All OhMyEmbed errors inherits from a generic OhMyEmbed::Error class
   #
   # - OhMyEmbed::UnknownProvider
