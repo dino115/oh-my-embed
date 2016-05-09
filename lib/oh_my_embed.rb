@@ -1,7 +1,7 @@
 require 'active_support/all'
 
 Dir.glob(File.join(__dir__, 'oh_my_embed', '*.rb'), &method(:require))
-Dir.glob(File.join(__dir__, 'oh_my_embed', '{providers}', '*.rb'), &method(:require))
+Dir.glob(File.join(__dir__, 'oh_my_embed', 'providers', '*.rb'), &method(:require))
 
 module OhMyEmbed
   # All OhMyEmbed errors inherits from a generic OhMyEmbed::Error class
