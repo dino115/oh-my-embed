@@ -53,7 +53,8 @@ module OhMyEmbed
       }))
 
       begin
-        response = Net::HTTP.get_response(uri)
+        http = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https')
+        response = http.request_get(uri, { 'User-Agent' => "Ruby/#{RUBY_VERSION}" })
       rescue Timeout::Error
         raise OhMyEmbed::Error.new('Request timed out')
       end
