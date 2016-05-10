@@ -7,12 +7,14 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Ruby/2.2.3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      User-Agent:
-      - Ruby
+      Host:
+      - publish.twitter.com
   response:
     status:
       code: 200
@@ -27,26 +29,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 08 May 2016 10:34:44 GMT
+      - Tue, 10 May 2016 17:27:40 GMT
       Expires:
-      - Tue, 14 Apr 2116 10:34:44 GMT
+      - Thu, 16 Apr 2116 17:27:40 GMT
       Last-Modified:
-      - Sun, 08 May 2016 10:34:44 GMT
+      - Tue, 10 May 2016 17:27:40 GMT
       Server:
-      - tsa_o
+      - tsa_b
       Set-Cookie:
-      - guest_id=v1%3A146270368433227856; Domain=.twitter.com; Path=/; Expires=Tue,
-        08-May-2018 10:34:44 UTC
+      - guest_id=v1%3A146290126090217547; Domain=.twitter.com; Path=/; Expires=Thu,
+        10-May-2018 17:27:40 UTC
       Strict-Transport-Security:
       - max-age=631138519
       X-Connection-Hash:
-      - 7cb3ac64bc2efd30d993cea7a81550d7
+      - a0e52c894a7cb519d0de0b80f683a258
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Response-Time:
-      - '110'
+      - '14'
       X-Xss-Protection:
       - 1; mode=block
     body:
@@ -62,5 +64,5 @@ http_interactions:
         3, 2014\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"\/\/platform.twitter.com\/widgets.js\"
         charset=\"utf-8\"\u003E\u003C\/script\u003E","width":550,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","height":null,"version":"1.0"}'
     http_version: 
-  recorded_at: Sun, 08 May 2016 10:34:44 GMT
+  recorded_at: Tue, 10 May 2016 17:27:40 GMT
 recorded_with: VCR 3.0.1

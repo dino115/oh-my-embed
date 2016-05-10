@@ -7,12 +7,14 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Ruby/2.2.3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      User-Agent:
-      - Ruby
+      Host:
+      - www.facebook.com
   response:
     status:
       code: 200
@@ -40,9 +42,9 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Fb-Debug:
-      - sqneNfNoRj99NDzfQJs+vX1mX2QPA0jjhfQAguxmp9odFp5V7BWDchtpb09ZLBBZyUkIQm3t7VPbCLSYeUS0aw==
+      - NwSlTuHrh1bfJY/Gssu2NEka0qtxrgdfuRkIf+X2A8yoqfaPszYN24nBRZLntIb/Fdw60QHtBIk9mSgFrHk3bw==
       Date:
-      - Sun, 08 May 2016 11:18:20 GMT
+      - Tue, 10 May 2016 17:27:30 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -61,5 +63,5 @@ http_interactions:
         by \u003Ca href=\"https://www.facebook.com/facebook/\">Facebook\u003C/a> on
         Freitag, 5. Dezember 2014\u003C/blockquote>\u003C/div>\u003C/div>","type":"video","version":"1.0","url":"https://www.facebook.com/facebook/videos/10153231379946729/","width":500}'
     http_version: 
-  recorded_at: Sun, 08 May 2016 11:18:20 GMT
+  recorded_at: Tue, 10 May 2016 17:27:30 GMT
 recorded_with: VCR 3.0.1

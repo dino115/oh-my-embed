@@ -7,34 +7,36 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Ruby/2.2.3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      User-Agent:
-      - Ruby
+      Host:
+      - www.youtube.com
   response:
     status:
       code: 200
       message: OK
     headers:
+      X-Xss-Protection:
+      - 1; mode=block; report=https://www.google.com/appserve/security-bugs/log/youtube
+      Expires:
+      - Tue, 27 Apr 1971 19:44:06 EST
+      X-Content-Type-Options:
+      - nosniff
+      P3p:
+      - CP="This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en
+        for more info."
+      Strict-Transport-Security:
+      - max-age=604800
       Content-Type:
       - application/json
       Cache-Control:
       - no-cache
-      X-Content-Type-Options:
-      - nosniff
-      X-Xss-Protection:
-      - 1; mode=block; report=https://www.google.com/appserve/security-bugs/log/youtube
-      Strict-Transport-Security:
-      - max-age=604800
-      P3p:
-      - CP="This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en
-        for more info."
-      Expires:
-      - Tue, 27 Apr 1971 19:44:06 EST
       Date:
-      - Sun, 08 May 2016 09:52:44 GMT
+      - Tue, 10 May 2016 17:27:41 GMT
       Server:
       - Ytfe_Worker
       Alternate-Protocol:
@@ -45,13 +47,12 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"author_name": "NyaAnimeParty", "author_url": "https:\/\/www.youtube.com\/user\/NyaAnimeParty",
-        "thumbnail_url": "https:\/\/i.ytimg.com\/vi\/EErY75MXYXI\/hqdefault.jpg",
-        "provider_name": "YouTube", "title": "Nyan Cat - 24 Hour Edition", "type":
-        "video", "version": "1.0", "height": 344, "thumbnail_height": 360, "width":
-        459, "thumbnail_width": 480, "provider_url": "https:\/\/www.youtube.com\/",
-        "html": "\u003ciframe width=\"459\" height=\"344\" src=\"https:\/\/www.youtube.com\/embed\/EErY75MXYXI?feature=oembed\"
-        frameborder=\"0\" allowfullscreen\u003e\u003c\/iframe\u003e"}'
+      string: '{"provider_name": "YouTube", "width": 459, "thumbnail_url": "https:\/\/i.ytimg.com\/vi\/EErY75MXYXI\/hqdefault.jpg",
+        "thumbnail_height": 360, "type": "video", "provider_url": "https:\/\/www.youtube.com\/",
+        "height": 344, "thumbnail_width": 480, "author_url": "https:\/\/www.youtube.com\/user\/NyaAnimeParty",
+        "version": "1.0", "html": "\u003ciframe width=\"459\" height=\"344\" src=\"https:\/\/www.youtube.com\/embed\/EErY75MXYXI?feature=oembed\"
+        frameborder=\"0\" allowfullscreen\u003e\u003c\/iframe\u003e", "author_name":
+        "NyaAnimeParty", "title": "Nyan Cat - 24 Hour Edition"}'
     http_version: 
-  recorded_at: Sun, 08 May 2016 09:52:44 GMT
+  recorded_at: Tue, 10 May 2016 17:27:41 GMT
 recorded_with: VCR 3.0.1

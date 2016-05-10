@@ -7,12 +7,14 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Ruby/2.2.3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      User-Agent:
-      - Ruby
+      Host:
+      - www.facebook.com
   response:
     status:
       code: 200
@@ -40,9 +42,9 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Fb-Debug:
-      - G6RjLdrqPe8/KAKzPR9FA3Ayv4EfoebAqPUlmmAmM/JTFIvgxfqLk8oSwSQefQRM6yq0XpTkFREf1Qlb87cuWQ==
+      - Tzox8b6mgFPotc6d4sFiHi9lhAMhulnc2A/G+3LVu3XlLLeL8Jb1LjmfBueNtoavcP06sTrN1GDwUAPwGa8DPg==
       Date:
-      - Sun, 08 May 2016 11:18:20 GMT
+      - Tue, 10 May 2016 17:27:30 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -61,5 +63,5 @@ http_interactions:
         on&nbsp;\u003Ca href=\"https://www.facebook.com/FacebookDeutschland/posts/10153796066380932\">Donnerstag,
         25. Februar 2016\u003C/a>\u003C/blockquote>\u003C/div>\u003C/div>","type":"rich","version":"1.0","url":"https://www.facebook.com/FacebookDeutschland/posts/10153796066380932","width":552}'
     http_version: 
-  recorded_at: Sun, 08 May 2016 11:18:20 GMT
+  recorded_at: Tue, 10 May 2016 17:27:30 GMT
 recorded_with: VCR 3.0.1

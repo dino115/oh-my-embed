@@ -7,12 +7,14 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Ruby/2.2.3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      User-Agent:
-      - Ruby
+      Host:
+      - api.instagram.com
   response:
     status:
       code: 200
@@ -29,25 +31,25 @@ http_interactions:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Date:
-      - Sun, 08 May 2016 10:22:56 GMT
+      - Tue, 10 May 2016 17:27:31 GMT
       Content-Type:
       - application/json
       Set-Cookie:
-      - csrftoken=5b8bafe22a2d41248b3be8426b4f1170; expires=Sun, 07-May-2017 10:22:56
+      - csrftoken=8f4dacd4a68f2934b4de8db475c1e6cb; expires=Tue, 09-May-2017 17:27:31
         GMT; Max-Age=31449600; Path=/
-      - mid=Vy8TgAAEAAHr9e0EiKy1oiFOtj6E; expires=Sat, 03-May-2036 10:22:56 GMT; Max-Age=630720000;
+      - mid=VzIaAwAEAAE3nyLm3C-s_zAajIeH; expires=Mon, 05-May-2036 17:27:31 GMT; Max-Age=630720000;
         Path=/
-      - s_network=; expires=Sun, 08-May-2016 11:22:56 GMT; Max-Age=3600; Path=/
-      - sessionid=IGSCf4e12422bb040f780b62a76f51d81658f436f18061debf80dcf2eefa20332090%3AQ4gZtzAIRGkrIW93eddUvjGtZa6jgSUk%3A%7B%22asns%22%3A%7B%2237.201.168.72%22%3A6830%2C%22time%22%3A1462702976%7D%7D;
-        expires=Sat, 06-Aug-2016 10:22:56 GMT; httponly; Max-Age=7776000; Path=/
+      - s_network=; expires=Tue, 10-May-2016 18:27:31 GMT; Max-Age=3600; Path=/
+      - sessionid=IGSC172cb5dc8a3a464594e13968285068a25f697470da7f859efea1505ee7f6513e%3A5JABAA5qawnpjtBgRwf7r0dq39cMUpF1%3A%7B%22asns%22%3A%7B%2294.79.132.90%22%3A6830%2C%22time%22%3A1462901251%7D%7D;
+        expires=Mon, 08-Aug-2016 17:27:31 GMT; httponly; Max-Age=7776000; Path=/
       Connection:
       - keep-alive
       Content-Length:
-      - '1402'
+      - '1403'
     body:
       encoding: ASCII-8BIT
       string: '{"provider_url": "https://www.instagram.com", "media_id": "558717847597368461_9538472",
-        "author_name": "diegoquinteiro", "height": null, "thumbnail_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e15/11358196_1472850273007829_614249870_n.jpg?ig_cache_key=NTU4NzE3ODQ3NTk3MzY4NDYx.2",
+        "author_name": "diegoquinteiro", "height": null, "thumbnail_url": "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e15/11358196_1472850273007829_614249870_n.jpg?ig_cache_key=NTU4NzE3ODQ3NTk3MzY4NDYx.2",
         "thumbnail_width": 640, "thumbnail_height": 640, "provider_name": "Instagram",
         "title": "Wii Gato (Lipe Sleep)", "html": "\u003cblockquote class=\"instagram-media\"
         data-instgrm-captioned data-instgrm-version=\"6\" style=\" background:#FFF;
@@ -71,5 +73,5 @@ http_interactions:
         "width": 658, "version": "1.0", "author_url": "https://www.instagram.com/diegoquinteiro",
         "author_id": 9538472, "type": "rich"}'
     http_version: 
-  recorded_at: Sun, 08 May 2016 10:22:56 GMT
+  recorded_at: Tue, 10 May 2016 17:27:31 GMT
 recorded_with: VCR 3.0.1

@@ -29,11 +29,9 @@ describe OhMyEmbed::Providers::Instagram do
           url: 'https://www.instagram.com/diegoquinteiro',
         })
 
-        expect(response.thumbnail).to eq({
-          url: 'https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e15/11358196_1472850273007829_614249870_n.jpg?ig_cache_key=NTU4NzE3ODQ3NTk3MzY4NDYx.2',
-          width: 640,
-          height: 640,
-        })
+        expect(response.thumbnail[:url]).to be_a String
+        expect(response.thumbnail[:width]).to eq 640
+        expect(response.thumbnail[:height]).to eq 640
 
         expect(response.embed[:html]).to be_a String
         expect(response.embed[:width]).to eq 658
