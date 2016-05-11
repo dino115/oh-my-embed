@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.dailymotion.com/services/oembed?format=json&url=http://www.dailymotion.com/video/x49ug8z_faszination-pferderennen-heute-eine-schule-fur-den-jockey-nachwuchs_sport
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.2.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Host:
+      - www.dailymotion.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - DMS/1.0.42
+      X-Dm-Backnode:
+      - 10.194.151.123:80
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Access-Control-Expose-Headers:
+      - X-DM-BackNode-Response-Time
+      Date:
+      - Wed, 11 May 2016 12:50:08 GMT
+      Keep-Alive:
+      - timeout=60, max=4995
+      X-Dm-Lb-Ip:
+      - 195.8.215.136
+      X-Dm-Lb-Name:
+      - lb-09
+      X-Dm-Backnode-Response-Time:
+      - '45'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - ts=411684; expires=Mon, 11-May-2026 12:50:08 GMT; Max-Age=315532800; path=/;
+        domain=.dailymotion.com
+      - v1st=BA6DCC745E462A37902E541FF45BFF3B; expires=Thu, 11 May 2017 12:50:08 GMT;
+        max-age=31536000; path=/; domain=.dailymotion.com
+      X-Dm-Page:
+      - de.html.oembed
+      Content-Length:
+      - '372'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"type":"video","version":"1.0","provider_name":"Dailymotion","provider_url":"https:\/\/www.dailymotion.com","title":"Faszination
+        Pferderennen - Heute: Eine Schule f\u00fcr den Jockey-Nachwuchs","description":"In
+        K\u00f6ln gibt es eine Schule f\u00fcr den Jockey-Nachwuchs im Pferdesport.","author_name":"A
+        Group","author_url":"https:\/\/www.dailymotion.com\/auer1","width":480,"height":269,"html":"<iframe
+        frameborder=\"0\" width=\"480\" height=\"269\" src=\"https:\/\/www.dailymotion.com\/embed\/video\/x49ug8z\"
+        allowfullscreen><\/iframe>","thumbnail_url":"https:\/\/s2-ssl.dmcdn.net\/XDvvJ\/x240-cMm.jpg","thumbnail_width":427,"thumbnail_height":240}'
+    http_version: 
+  recorded_at: Wed, 11 May 2016 12:50:08 GMT
+recorded_with: VCR 3.0.1
