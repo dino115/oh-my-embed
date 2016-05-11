@@ -40,6 +40,13 @@ describe OhMyEmbed::Crawler do
       expect(crawler.providers.first).to be OhMyEmbed::Providers::BuiltInDummy
     end
 
+    it 'it add a plural named provider class to the providers list' do
+      class OhMyEmbed::Providers::MyPosts < OhMyEmbed::Provider; end
+
+      expect{ crawler.register(:my_posts) }.to change{ crawler.providers.count }.from(0).to(1)
+      expect(crawler.providers.first).to be OhMyEmbed::Providers::MyPosts
+    end
+
     it 'raises an error if no provider class found' do
       expect{ crawler.register :yolo }.to raise_error OhMyEmbed::UnknownProvider
     end

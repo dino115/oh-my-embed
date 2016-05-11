@@ -23,7 +23,7 @@ module OhMyEmbed
     def register(provider)
       if provider.is_a? Symbol
         begin
-          provider = OhMyEmbed::Providers.const_get(provider.to_s.classify)
+          provider = OhMyEmbed::Providers.const_get(provider.to_s.camelize)
         rescue NameError
           raise OhMyEmbed::UnknownProvider.new(provider)
         end
