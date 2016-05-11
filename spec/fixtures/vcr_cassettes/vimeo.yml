@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://vimeo.com/api/oembed.json?format=json&url=https://vimeo.com/76979871
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.2.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Host:
+      - vimeo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      Cache-Control:
+      - max-age=60
+      Expires:
+      - Wed, 11 May 2016 13:42:22 GMT
+      Last-Modified:
+      - Wed, 11 May 2016 12:54:52 GMT
+      Etag:
+      - '"9b7fb93c2f1e80224398c6ba991977f6244a2902"'
+      X-Ua-Compatible:
+      - IE=edge
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=15120000; includeSubDomains; preload
+      Content-Security-Policy-Report-Only:
+      - 'default-src https: data: blob: ''unsafe-inline'' ''unsafe-eval''; report-uri
+        /_csp'
+      Via:
+      - 1.1 varnish
+      - 1.1 varnish
+      Fastly-Debug-Digest:
+      - e148781371e0d734aef68bed9616522d87baa1afd00efbfd4e7ba101ae5e2d4a
+      Content-Length:
+      - '845'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Wed, 11 May 2016 13:41:22 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-iad2121-IAD, cache-fra1228-FRA
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1462974082.558658,VS0,VE125
+      Vary:
+      - User-Agent,Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"The
+        New Vimeo Player (You Know, For Videos)","author_name":"Vimeo Staff","author_url":"https:\/\/vimeo.com\/staff","is_plus":"0","html":"<iframe
+        src=\"https:\/\/player.vimeo.com\/video\/76979871\" width=\"1280\" height=\"720\"
+        frameborder=\"0\" title=\"The New Vimeo Player (You Know, For Videos)\" webkitallowfullscreen
+        mozallowfullscreen allowfullscreen><\/iframe>","width":1280,"height":720,"duration":62,"description":"It
+        may look (mostly) the same on the surface, but under the hood we totally rebuilt
+        our player. Here\u2019s a quick rundown of some of the coolest new features:\n\n\u2022
+        Lightning fast playback\n\u2022 Redesigned Share screen\n\u2022 Closed caption
+        and subtitle compatible\n\u2022 HTML5 by default\n\u2022 Purchase-from-player
+        functionality for embedded Vimeo On Demand trailers\n\u2022 More responsive
+        than ever (go ahead, resize it, we dare you!!!)\n\nWe\u2019re really proud
+        of these updates. So proud that we made a spiffy new page to showcase all
+        the reasons why we have the best video player in the galaxy. Check it out
+        here: http:\/\/vimeo.com\/player\n\nIn short, this is a player that even haters
+        can love.","thumbnail_url":"https:\/\/i.vimeocdn.com\/video\/452001751_1280.jpg","thumbnail_width":1280,"thumbnail_height":720,"thumbnail_url_with_play_button":"https:\/\/i.vimeocdn.com\/filter\/overlay?src=https:\/\/i.vimeocdn.com\/video\/452001751_1280.jpg&src=http:\/\/f.vimeocdn.com\/p\/images\/crawler_play.png","upload_date":"2013-10-15
+        14:08:29","video_id":76979871,"uri":"\/videos\/76979871"}'
+    http_version: 
+  recorded_at: Wed, 11 May 2016 13:41:22 GMT
+recorded_with: VCR 3.0.1
