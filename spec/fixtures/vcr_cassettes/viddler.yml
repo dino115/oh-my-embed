@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.viddler.com/oembed/?format=json&url=http://www.viddler.com/v/bdce8c7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.2.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Host:
+      - www.viddler.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 May 2016 13:28:35 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '478'
+      Connection:
+      - keep-alive
+      X-Viddler-Node:
+      - viddler_c
+      Set-Cookie:
+      - JSESSIONID=1A72ECBFBA6297FBAA981A665FEEA6F3.viddler_c; Domain=.viddler.com;
+        Path=/logged/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"type":"video","version":"1.0","provider_name":"Viddler","provider_url":"http://www.viddler.com/","title":"Viddler
+        Platform Overview","author_name ":"viddler","author_url":"http://viddler.com","thumbnail_url":"http://thumbs.cdn-ec.viddler.com/thumbnail_2_bdce8c7_v8.jpg","thumbnail_width":620,"thumbnail_height":349,"html":"<iframe
+        width=\"620\" height=\"349\" src=\"http://www.viddler.com/embed/bdce8c7\"
+        frameborder=\"0\" allowfullscreen><\/iframe>","width":620,"height":349}'
+    http_version: 
+  recorded_at: Wed, 11 May 2016 13:28:35 GMT
+recorded_with: VCR 3.0.1
