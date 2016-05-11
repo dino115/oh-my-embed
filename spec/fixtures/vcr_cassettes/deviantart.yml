@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://backend.deviantart.com/oembed?format=json&url=http://fav.me/d2enxz7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.2.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Host:
+      - backend.deviantart.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '604'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=180
+      Date:
+      - Wed, 11 May 2016 14:08:59 GMT
+      Expires:
+      - Wed, 11 May 2016 14:11:59 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 3a3025640eaad9970531c0d9450c1606.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - VnKocR5x0lg8SelfMZVAXiVvRe1jVmYSZvifDQDJNxc-BG-MWy6BZw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"version":"1.0","type":"photo","title":"Cope","category":"Digital
+        Art > Drawings & Paintings > Illustrations > Conceptual","url":"http:\/\/orig03.deviantart.net\/3c1c\/f\/2009\/336\/4\/7\/cope_by_pachunka.jpg","author_name":"Pachunka","author_url":"http:\/\/Pachunka.deviantart.com","provider_name":"DeviantArt","provider_url":"http:\/\/www.deviantart.com","safety":"nonadult","pubdate":"2009-12-02T23:59:51-08:00","community":{"statistics":{"_attributes":{"views":1326,"favorites":5,"comments":5,"downloads":59}}},"copyright":{"_attributes":{"url":"http:\/\/Pachunka.deviantart.com","year":"2009","entity":"Pachunka"}},"width":"448","height":"672","imagetype":"jpg","thumbnail_url":"http:\/\/t10.deviantart.net\/nHw1FLNfxnT4ga1BPKmlV3V7h2E=\/fit-in\/300x900\/filters:no_upscale():origin()\/pre11\/dde3\/th\/pre\/f\/2009\/336\/4\/7\/cope_by_pachunka.jpg","thumbnail_width":300,"thumbnail_height":450,"thumbnail_url_150":"http:\/\/t08.deviantart.net\/vVG89JdVpkScdywi4UoX87Htfdg=\/fit-in\/150x150\/filters:no_upscale():origin()\/pre11\/dde3\/th\/pre\/f\/2009\/336\/4\/7\/cope_by_pachunka.jpg","thumbnail_url_200h":"http:\/\/t01.deviantart.net\/KOxWveFcueoTEaYgA_GBLfFMisg=\/300x200\/filters:fixed_height(100,100):origin()\/pre11\/dde3\/th\/pre\/f\/2009\/336\/4\/7\/cope_by_pachunka.jpg","thumbnail_width_200h":133,"thumbnail_height_200h":200}'
+    http_version: 
+  recorded_at: Wed, 11 May 2016 14:08:59 GMT
+recorded_with: VCR 3.0.1
