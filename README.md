@@ -36,6 +36,10 @@ Or install it yourself as:
 - SoundCloud
 - Kickstarter
 - Spotify
+- Dailymotion
+- Viddler
+- Vimeo
+- DeviantArt
 
 If you need some other providers feel free to add them via pull request or build it for your application only by using the `OhMyEmbed::Provider` base class.
 See the custom provider section for more informations.
